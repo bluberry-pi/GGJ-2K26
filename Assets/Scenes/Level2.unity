@@ -659,6 +659,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!1001 &378035545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626001404672361782, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672229139185648437, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
+      propertyPath: m_Name
+      value: Global Light 2D
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3dbae015ff704c42969a5981dd99bcf, type: 3}
 --- !u!1 &638988640
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,8 +959,8 @@ MonoBehaviour:
   button: {fileID: 17057614}
   doorPart1: {fileID: 1201713101}
   doorPart2: {fileID: 1255291328}
-  openPos1: {x: -4.91, y: 0.3}
-  openPos2: {x: 5.88, y: 0.3}
+  openPos1: {x: -4.91, y: 0.3, z: 0}
+  openPos2: {x: 5.88, y: 0.3, z: 0}
   openSpeed: 5
   closeSpeed: 10
 --- !u!1 &1115312813
@@ -1541,3 +1598,4 @@ SceneRoots:
   - {fileID: 2041859772}
   - {fileID: 355053839}
   - {fileID: 17057612}
+  - {fileID: 378035545}

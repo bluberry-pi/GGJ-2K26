@@ -6,6 +6,11 @@ public class MaskScript : MonoBehaviour
     public SpriteRenderer[] normalSprites;
     public SpriteRenderer[] maskedSprites;
 
+    // 🔹 ADD: root objects for modes
+    [Header("Mode GameObjects")]
+    public GameObject normalModeObject;
+    public GameObject maskedModeObject;
+
     public bool IsMaskedMode { get; private set; }
 
     int playerNormalLayer;
@@ -16,14 +21,12 @@ public class MaskScript : MonoBehaviour
 
     void Start()
     {
-        // Cache layers (NameToLayer returns -1 if layer doesn't exist)
         playerNormalLayer   = LayerMask.NameToLayer("PlayerNormal");
         normalObstacleLayer = LayerMask.NameToLayer("NormalObstacle");
         buttonLayer         = LayerMask.NameToLayer("Button");
         maskedPlayerLayer   = LayerMask.NameToLayer("MaskedPlayer");
         boxLayer            = LayerMask.NameToLayer("Box");
 
-        // Debug once. If you see -1, your layer is missing or misspelled.
         Debug.Log(
             $"Layers → PlayerNormal:{playerNormalLayer}, " +
             $"NormalObstacle:{normalObstacleLayer}, " +
@@ -50,6 +53,13 @@ public class MaskScript : MonoBehaviour
     {
         IsMaskedMode = showMask;
 
+        // ---------- ADD: GAMEOBJECT TOGGLE ----------
+        if (normalModeObject)
+            normalModeObject.SetActive(!showMask);
+
+        if (maskedModeObject)
+            maskedModeObject.SetActive(showMask);
+
         // ---------- VISUALS ----------
         foreach (var s in normalSprites)
             if (s) s.enabled = !showMask;
@@ -58,8 +68,6 @@ public class MaskScript : MonoBehaviour
             if (s) s.enabled = showMask;
 
         // ---------- PHYSICS ----------
-        // Normal mode → ignore extra collisions
-        // Masked mode → restore collisions
         bool ignoreInNormal = !showMask;
 
         SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
