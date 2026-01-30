@@ -16,10 +16,10 @@ TagManager:
   - UI
   - PlayerNormal
   - NormalObstacle
-  - 
-  - 
-  - 
-  - 
+  - PlayerMasked1
+  - MaskObstacle
+  - Box
+  - Button
   - 
   - 
   - 
