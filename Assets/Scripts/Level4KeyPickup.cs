@@ -2,25 +2,28 @@ using UnityEngine;
 
 public class Level4KeyPickup : MonoBehaviour
 {
+    public GameObject normalkey;
     public GameObject playernormalkey;
+
     private bool playerInRange;
 
     private void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && normalkey.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            gameObject.SetActive(false);
+            normalkey.SetActive(false);
             playernormalkey.SetActive(true);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-            playerInRange = true;
+        playerInRange = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-            playerInRange = false;
+        playerInRange = false;
+
     }
 }

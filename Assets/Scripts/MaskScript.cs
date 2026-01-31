@@ -12,6 +12,7 @@ public class MaskScript : MonoBehaviour
 
     [Header("Scripts To Toggle")]
     public MonoBehaviour[] disableInNormalMode;
+    public MonoBehaviour[] disableInMaskedMode;
 
     public bool IsMaskedMode { get; private set; }
 
@@ -59,12 +60,11 @@ public class MaskScript : MonoBehaviour
         foreach (var s in maskedSprites)
             if (s) s.enabled = showMask;
 
-        // 🔁 Disable scripts in NORMAL mode, enable in MASK mode
         foreach (var script in disableInNormalMode)
-        {
-            if (script)
-                script.enabled = showMask;
-        }
+            if (script) script.enabled = showMask;
+
+        foreach (var script in disableInMaskedMode)
+            if (script) script.enabled = !showMask;
 
         bool ignoreInNormal = !showMask;
 
@@ -76,9 +76,7 @@ public class MaskScript : MonoBehaviour
     void SafeIgnore(int layerA, int layerB, bool ignore)
     {
         if (IsValidLayer(layerA) && IsValidLayer(layerB))
-        {
             Physics2D.IgnoreLayerCollision(layerA, layerB, ignore);
-        }
     }
 
     bool IsValidLayer(int layer)
