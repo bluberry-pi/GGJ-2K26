@@ -8,12 +8,15 @@ public class MaskedPlayerMovement : MonoBehaviour
     public Rigidbody2D normalRb;
     public MaskScript maskScript;
     public NormalPlayerMovement normalMovement;
+    
     Vector2 input;
     Vector2 lastMaskedPos;
+    Vector2 lastNormalPos; // Track normal player's actual movement
     
     void Start()
     {
         lastMaskedPos = maskedRb.position;
+        lastNormalPos = normalRb.position;
     }
     
     void Update()
@@ -27,35 +30,44 @@ public class MaskedPlayerMovement : MonoBehaviour
     {
         if (maskScript.IsMaskedMode)
         {
-            // MASKED is leader - apply input
+            // MASKED is leader
             maskedRb.linearVelocity = input * moveSpeed;
             
-            // Start coroutine to copy velocity AFTER physics resolves
             StartCoroutine(CopyMaskedVelocityAfterPhysics());
         }
         else
         {
-            // NORMAL is leader - copy its ACTUAL velocity (physics already resolved)
+            // NORMAL is leader - copy ACTUAL velocity after physics
             if (normalMovement.DidMoveThisFrame)
-                maskedRb.linearVelocity = normalRb.linearVelocity;
+            {
+                // Get the actual movement that happened (after collision resolution)
+                Vector2 actualMovement = normalRb.position - lastNormalPos;
+                Vector2 actualVelocity = actualMovement / Time.fixedDeltaTime;
+                
+                maskedRb.linearVelocity = actualVelocity;
+            }
             else
+            {
                 maskedRb.linearVelocity = Vector2.zero;
+            }
         }
         
         lastMaskedPos = maskedRb.position;
+        lastNormalPos = normalRb.position;
     }
     
     IEnumerator CopyMaskedVelocityAfterPhysics()
     {
-        // Wait for physics to finish this frame
         yield return new WaitForFixedUpdate();
         
-        // NOW copy the actual velocity (after collisions/friction applied)
-        bool maskedMoved =
-            Vector2.SqrMagnitude(maskedRb.position - lastMaskedPos) > 0.000001f;
+        // Get masked's ACTUAL movement after physics
+        Vector2 actualMovement = maskedRb.position - lastMaskedPos;
+        Vector2 actualVelocity = actualMovement / Time.fixedDeltaTime;
+        
+        bool maskedMoved = actualMovement.sqrMagnitude > 0.000001f;
         
         if (maskedMoved || input != Vector2.zero)
-            normalRb.linearVelocity = maskedRb.linearVelocity;
+            normalRb.linearVelocity = actualVelocity;
         else
             normalRb.linearVelocity = Vector2.zero;
     }

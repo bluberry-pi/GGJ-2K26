@@ -6,10 +6,12 @@ public class MaskScript : MonoBehaviour
     public SpriteRenderer[] normalSprites;
     public SpriteRenderer[] maskedSprites;
 
-    // 🔹 ADD: root objects for modes
     [Header("Mode GameObjects")]
     public GameObject normalModeObject;
     public GameObject maskedModeObject;
+
+    [Header("Scripts To Toggle")]
+    public MonoBehaviour[] disableInNormalMode;
 
     public bool IsMaskedMode { get; private set; }
 
@@ -27,15 +29,7 @@ public class MaskScript : MonoBehaviour
         maskedPlayerLayer   = LayerMask.NameToLayer("MaskedPlayer");
         boxLayer            = LayerMask.NameToLayer("Box");
 
-        Debug.Log(
-            $"Layers → PlayerNormal:{playerNormalLayer}, " +
-            $"NormalObstacle:{normalObstacleLayer}, " +
-            $"Button:{buttonLayer}, " +
-            $"MaskedPlayer:{maskedPlayerLayer}, " +
-            $"Box:{boxLayer}"
-        );
-
-        SetMask(false); // start in Normal mode
+        SetMask(false);
     }
 
     void Update()
@@ -53,21 +47,25 @@ public class MaskScript : MonoBehaviour
     {
         IsMaskedMode = showMask;
 
-        // ---------- ADD: GAMEOBJECT TOGGLE ----------
         if (normalModeObject)
             normalModeObject.SetActive(!showMask);
 
         if (maskedModeObject)
             maskedModeObject.SetActive(showMask);
 
-        // ---------- VISUALS ----------
         foreach (var s in normalSprites)
             if (s) s.enabled = !showMask;
 
         foreach (var s in maskedSprites)
             if (s) s.enabled = showMask;
 
-        // ---------- PHYSICS ----------
+        // 🔁 Disable scripts in NORMAL mode, enable in MASK mode
+        foreach (var script in disableInNormalMode)
+        {
+            if (script)
+                script.enabled = showMask;
+        }
+
         bool ignoreInNormal = !showMask;
 
         SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
@@ -75,7 +73,6 @@ public class MaskScript : MonoBehaviour
         SafeIgnore(maskedPlayerLayer, boxLayer, ignoreInNormal);
     }
 
-    // ---------- SAFETY ----------
     void SafeIgnore(int layerA, int layerB, bool ignore)
     {
         if (IsValidLayer(layerA) && IsValidLayer(layerB))

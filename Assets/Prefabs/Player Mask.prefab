@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937828ba4d2d88844b24dd727a44d2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 5
   maskedRb: {fileID: 1992486204357559196}
   normalRb: {fileID: 0}
   maskScript: {fileID: 0}

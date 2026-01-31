@@ -830,6 +830,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1385464978}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: normalSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: 'maskedSprites.Array.data[0]'
       value: 
       objectReference: {fileID: 2021895042}
@@ -849,6 +853,10 @@ PrefabInstance:
       propertyPath: 'normalSprites.Array.data[2]'
       value: 
       objectReference: {fileID: 2124791474}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1334187225}
     - target: {fileID: 7802412474222968065, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
