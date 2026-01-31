@@ -8,6 +8,7 @@ TagManager:
   - NormalPlayer
   - MaskedPlayer
   - Crate
+  - L5key
   layers:
   - Default
   - TransparentFX

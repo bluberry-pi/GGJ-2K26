@@ -1103,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 4083165133544215296, guid: bfc4696ef25f61d4bb00e469bb9f5167, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4973540953230192570, guid: bfc4696ef25f61d4bb00e469bb9f5167, type: 3}
       propertyPath: normalRb
       value: 
@@ -1426,6 +1430,10 @@ PrefabInstance:
     - target: {fileID: 4862813089511151890, guid: 06fed72dd9ce55b4fa197f84d89eb22f, type: 3}
       propertyPath: m_Name
       value: Player Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862813089511151890, guid: 06fed72dd9ce55b4fa197f84d89eb22f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7813396413184045106, guid: 06fed72dd9ce55b4fa197f84d89eb22f, type: 3}
       propertyPath: m_Color.b
