@@ -18,19 +18,15 @@ public class MaskScript : MonoBehaviour
 
     int playerNormalLayer;
     int normalObstacleLayer;
-    int buttonLayer;
-    int playerMaskedLayer;     // PlayerMasked1
-    int maskObstacleLayer;     // MaskObstacle
-    int boxLayer;
+    int playerMaskedLayer;   // PlayerMasked1
+    int maskObstacleLayer;   // MaskObstacle
 
     void Start()
     {
         playerNormalLayer   = LayerMask.NameToLayer("PlayerNormal");
         normalObstacleLayer = LayerMask.NameToLayer("NormalObstacle");
-        buttonLayer         = LayerMask.NameToLayer("Button");
         playerMaskedLayer   = LayerMask.NameToLayer("PlayerMasked1");
         maskObstacleLayer   = LayerMask.NameToLayer("MaskObstacle");
-        boxLayer            = LayerMask.NameToLayer("Box");
 
         SetMask(false); // start in normal mode
     }
@@ -38,57 +34,53 @@ public class MaskScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
-            ToggleMask();
+            SetMask(!IsMaskedMode);
     }
 
-    void ToggleMask()
+    void SetMask(bool masked)
     {
-        SetMask(!IsMaskedMode);
-    }
+        IsMaskedMode = masked;
 
-    void SetMask(bool showMask)
-    {
-        IsMaskedMode = showMask;
-
-        // Toggle mode objects
+        // Toggle mode GameObjects
         if (normalModeObject)
-            normalModeObject.SetActive(!showMask);
+            normalModeObject.SetActive(!masked);
 
         if (maskedModeObject)
-            maskedModeObject.SetActive(showMask);
+            maskedModeObject.SetActive(masked);
 
         // Toggle sprites
-        foreach (var s in normalSprites)
-            if (s) s.enabled = !showMask;
-
-        foreach (var s in maskedSprites)
-            if (s) s.enabled = showMask;
+        ToggleSprites(normalSprites, !masked);
+        ToggleSprites(maskedSprites, masked);
 
         // Toggle scripts
-        foreach (var script in disableInNormalMode)
-            if (script) script.enabled = showMask;
+        ToggleScripts(disableInNormalMode, masked);
+        ToggleScripts(disableInMaskedMode, !masked);
 
-        foreach (var script in disableInMaskedMode)
-            if (script) script.enabled = !showMask;
+        // Collision rules
+        ApplyCollisionRules();
+    }
 
-        bool ignoreInNormal = !showMask;
+    void ApplyCollisionRules()
+    {
+        // NORMAL MODE:
+        // PlayerMasked1 ignores MaskObstacle
+        SafeIgnore(playerMaskedLayer, maskObstacleLayer, !IsMaskedMode);
 
-        /*
-         * NORMAL MODE
-         * PlayerMasked1 ignores MaskObstacle
-         */
-        SafeIgnore(playerMaskedLayer, maskObstacleLayer, ignoreInNormal);
+        // OPTIONAL WORLD SEPARATION:
+        // PlayerNormal ignores NormalObstacle in masked mode
+        SafeIgnore(playerNormalLayer, normalObstacleLayer, IsMaskedMode);
+    }
 
-        /*
-         * MASKED MODE
-         * Restore collisions
-         */
-        SafeIgnore(playerMaskedLayer, maskObstacleLayer, false);
+    void ToggleSprites(SpriteRenderer[] sprites, bool state)
+    {
+        foreach (var s in sprites)
+            if (s) s.enabled = state;
+    }
 
-        /*
-         * OPTIONAL: Normal world separation
-         */
-        SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
+    void ToggleScripts(MonoBehaviour[] scripts, bool state)
+    {
+        foreach (var script in scripts)
+            if (script) script.enabled = state;
     }
 
     void SafeIgnore(int layerA, int layerB, bool ignore)
