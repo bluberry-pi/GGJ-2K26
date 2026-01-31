@@ -20,25 +20,28 @@ public class L5MaskCross2 : MonoBehaviour
     Coroutine moveRoutine;
     int objectsInside = 0;
 
-
     private void Start()
     {
         if (door1 != null)
             closedLocalPosition = door1.localPosition;
     }
 
+    // -------------------- ENTER --------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!IsDoorObject(other))
+            return;
+
         Debug.Log($"[ENTER] {other.name} | {other.tag} | MaskedMode: {maskScript.IsMaskedMode}");
 
+        // Block masked player ONLY when mask mode is OFF
         if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
         {
-            Debug.Log("[BLOCKED] MaskedPlayer blocked");
+            Debug.Log("[BLOCKED] MaskedPlayer blocked on enter");
             return;
         }
 
         objectsInside++;
-
         Debug.Log($"[COUNT] Inside = {objectsInside}");
 
         if (objectsInside == 1)
@@ -48,19 +51,15 @@ public class L5MaskCross2 : MonoBehaviour
         }
     }
 
-
+    // -------------------- EXIT --------------------
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!IsDoorObject(other))
+            return;
+
         Debug.Log($"[EXIT] {other.name} | {other.tag} | MaskedMode: {maskScript.IsMaskedMode}");
 
-        if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
-        {
-            Debug.Log("[BLOCKED] MaskedPlayer exit ignored");
-            return;
-        }
-
         objectsInside = Mathf.Max(0, objectsInside - 1);
-
         Debug.Log($"[COUNT] Inside = {objectsInside}");
 
         if (objectsInside == 0)
@@ -70,7 +69,18 @@ public class L5MaskCross2 : MonoBehaviour
         }
     }
 
+    // -------------------- HELPERS --------------------
+    bool IsDoorObject(Collider2D other)
+    {
+        // Players
+        if (other.CompareTag("NormalPlayer")) return true;
+        if (other.CompareTag("MaskedPlayer")) return true;
 
+        // Crates (use tag or layer, your choice)
+        if (other.CompareTag("Crate")) return true;
+
+        return false;
+    }
 
     void StartMove(Vector3 targetLocalPos, float speed)
     {
@@ -89,7 +99,6 @@ public class L5MaskCross2 : MonoBehaviour
                 targetLocalPos,
                 speed * Time.deltaTime
             );
-
             yield return null;
         }
 
