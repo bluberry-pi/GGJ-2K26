@@ -11,7 +11,7 @@ public class MaskedPlayerMovement : MonoBehaviour
     
     Vector2 input;
     Vector2 lastMaskedPos;
-    Vector2 lastNormalPos; // Track normal player's actual movement
+    Vector2 lastNormalPos;
     
     void Start()
     {
@@ -37,19 +37,8 @@ public class MaskedPlayerMovement : MonoBehaviour
         }
         else
         {
-            // NORMAL is leader - copy ACTUAL velocity after physics
-            if (normalMovement.DidMoveThisFrame)
-            {
-                // Get the actual movement that happened (after collision resolution)
-                Vector2 actualMovement = normalRb.position - lastNormalPos;
-                Vector2 actualVelocity = actualMovement / Time.fixedDeltaTime;
-                
-                maskedRb.linearVelocity = actualVelocity;
-            }
-            else
-            {
-                maskedRb.linearVelocity = Vector2.zero;
-            }
+            // NORMAL is leader - wait for physics then copy
+            StartCoroutine(CopyNormalVelocityAfterPhysics());
         }
         
         lastMaskedPos = maskedRb.position;
@@ -70,5 +59,21 @@ public class MaskedPlayerMovement : MonoBehaviour
             normalRb.linearVelocity = actualVelocity;
         else
             normalRb.linearVelocity = Vector2.zero;
+    }
+    
+    IEnumerator CopyNormalVelocityAfterPhysics()
+    {
+        yield return new WaitForFixedUpdate();
+        
+        // Get normal's ACTUAL movement after physics (including slowdown from pushing)
+        Vector2 actualMovement = normalRb.position - lastNormalPos;
+        Vector2 actualVelocity = actualMovement / Time.fixedDeltaTime;
+        
+        bool normalMoved = actualMovement.sqrMagnitude > 0.000001f;
+        
+        if (normalMoved)
+            maskedRb.linearVelocity = actualVelocity;
+        else
+            maskedRb.linearVelocity = Vector2.zero;
     }
 }

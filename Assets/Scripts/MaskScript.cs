@@ -20,17 +20,19 @@ public class MaskScript : MonoBehaviour
     int normalObstacleLayer;
     int buttonLayer;
     int maskedPlayerLayer;
+    int maskedObstacleLayer;
     int boxLayer;
 
     void Start()
     {
-        playerNormalLayer   = LayerMask.NameToLayer("PlayerNormal");
-        normalObstacleLayer = LayerMask.NameToLayer("NormalObstacle");
-        buttonLayer         = LayerMask.NameToLayer("Button");
-        maskedPlayerLayer   = LayerMask.NameToLayer("MaskedPlayer");
-        boxLayer            = LayerMask.NameToLayer("Box");
+        playerNormalLayer    = LayerMask.NameToLayer("PlayerNormal");
+        normalObstacleLayer  = LayerMask.NameToLayer("NormalObstacle");
+        buttonLayer          = LayerMask.NameToLayer("Button");
+        maskedPlayerLayer    = LayerMask.NameToLayer("MaskedPlayer");
+        maskedObstacleLayer  = LayerMask.NameToLayer("MaskedObstacle");
+        boxLayer             = LayerMask.NameToLayer("Box");
 
-        SetMask(false);
+        SetMask(false); // start in normal mode
     }
 
     void Update()
@@ -68,9 +70,13 @@ public class MaskScript : MonoBehaviour
 
         bool ignoreInNormal = !showMask;
 
+        // Normal world rules
         SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
-        SafeIgnore(buttonLayer, maskedPlayerLayer, ignoreInNormal);
+
+        // Masked world ignored in normal mode
+        SafeIgnore(maskedPlayerLayer, maskedObstacleLayer, ignoreInNormal);
         SafeIgnore(maskedPlayerLayer, boxLayer, ignoreInNormal);
+        SafeIgnore(buttonLayer, maskedPlayerLayer, ignoreInNormal);
     }
 
     void SafeIgnore(int layerA, int layerB, bool ignore)
