@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: ad2df8e972e855a4b89778a0b09c69ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5108543262440262644
+    second: BG_white_lines_2_0
+  - first:
+      213: -2278830947247047958
+    second: BG_white_lines_2_1
+  - first:
+      213: -1934138440413027006
+    second: BG_white_lines_2_2
+  - first:
+      213: -3747907910593868581
+    second: BG_white_lines_2_3
+  - first:
+      213: -3827852196456525190
+    second: BG_white_lines_2_4
+  - first:
+      213: 2764369752682335559
+    second: BG_white_lines_2_5
+  - first:
+      213: 1993447062262636429
+    second: BG_white_lines_2_6
+  - first:
+      213: -3003602122662913990
+    second: BG_white_lines_2_7
+  - first:
+      213: -6045261858135855544
+    second: BG_white_lines_2_8
+  - first:
+      213: 8947326462976745840
+    second: BG_white_lines_2_9
+  - first:
+      213: -7514040484494240868
+    second: BG_white_lines_2_10
+  - first:
+      213: -54412045912459592
+    second: BG_white_lines_2_11
+  - first:
+      213: 2544316035550333170
+    second: BG_white_lines_2_12
+  - first:
+      213: -1978299121467066794
+    second: BG_white_lines_2_13
+  - first:
+      213: -1358416384696949688
+    second: BG_white_lines_2_14
+  - first:
+      213: -5519936802964727358
+    second: BG_white_lines_2_15
+  - first:
+      213: -4430336647704771420
+    second: BG_white_lines_2_16
+  - first:
+      213: -8601246073408290199
+    second: BG_white_lines_2_17
+  - first:
+      213: -8325990428829750234
+    second: BG_white_lines_2_18
+  - first:
+      213: -3747498334219087319
+    second: BG_white_lines_2_19
+  - first:
+      213: -2337106965164455181
+    second: BG_white_lines_2_20
+  - first:
+      213: -5974805513507591568
+    second: BG_white_lines_2_21
+  - first:
+      213: 823078095720418080
+    second: BG_white_lines_2_22
+  - first:
+      213: 4844651638930216383
+    second: BG_white_lines_2_23
+  - first:
+      213: -7027217826122598897
+    second: BG_white_lines_2_24
+  - first:
+      213: 2238460726191765873
+    second: BG_white_lines_2_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BG_white_lines_2_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 765
+        width: 75
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04788218feca19b0800000000000000
+      internalID: -5108543262440262644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 766
+        width: 120
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea3c26c357ff50e0800000000000000
+      internalID: -2278830947247047958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 768
+        width: 73
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245e0c0065f8825e0800000000000000
+      internalID: -1934138440413027006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 767
+        width: 140
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc0d22dc91ccfbc0800000000000000
+      internalID: -3747907910593868581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 768
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72928945bcb0eac0800000000000000
+      internalID: -3827852196456525190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_5
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 736
+        width: 7
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d0770d4a30d5620800000000000000
+      internalID: 2764369752682335559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 688
+        width: 7
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fd5b89a852aab10800000000000000
+      internalID: 1993447062262636429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_7
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 604
+        width: 10
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38511088cf0156d0800000000000000
+      internalID: -3003602122662913990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 652
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e28938e5aea1ca0800000000000000
+      internalID: -6045261858135855544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 486
+        width: 142
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0716e2b530a4b2c70800000000000000
+      internalID: 8947326462976745840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_10
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 581
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9311dd8df3c8b790800000000000000
+      internalID: -7514040484494240868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_11
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 565
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6b2e35880be3ff0800000000000000
+      internalID: -54412045912459592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 468
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8ce4734f93f4320800000000000000
+      internalID: 2544316035550333170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_13
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 426
+        width: 123
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656fc753e6bab84e0800000000000000
+      internalID: -1978299121467066794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_14
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 372
+        width: 9
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844611dce7fe52de0800000000000000
+      internalID: -1358416384696949688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_15
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 326
+        width: 10
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c99eac39be3563b0800000000000000
+      internalID: -5519936802964727358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 302
+        width: 8
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a48926ba484482c0800000000000000
+      internalID: -4430336647704771420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 273
+        width: 9
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96286c0844c32a880800000000000000
+      internalID: -8601246073408290199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 224
+        width: 20
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cec4661d3247c80800000000000000
+      internalID: -8325990428829750234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_19
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 254
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922d080ce163efbc0800000000000000
+      internalID: -3747498334219087319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 223
+        width: 100
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa0843099de09fd0800000000000000
+      internalID: -2337106965164455181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 224
+        width: 131
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07aa5559a0a351da0800000000000000
+      internalID: -5974805513507591568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_22
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 225
+        width: 81
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b02ddca292c6b00800000000000000
+      internalID: 823078095720418080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 224
+        width: 64
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb513fe5ff8ab3340800000000000000
+      internalID: 4844651638930216383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_24
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 224
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f067ba27e9e4a7e90800000000000000
+      internalID: -7027217826122598897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_white_lines_2_25
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 225
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179b25cab2c901f10800000000000000
+      internalID: 2238460726191765873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BG_white_lines_2_0: -5108543262440262644
+      BG_white_lines_2_1: -2278830947247047958
+      BG_white_lines_2_10: -7514040484494240868
+      BG_white_lines_2_11: -54412045912459592
+      BG_white_lines_2_12: 2544316035550333170
+      BG_white_lines_2_13: -1978299121467066794
+      BG_white_lines_2_14: -1358416384696949688
+      BG_white_lines_2_15: -5519936802964727358
+      BG_white_lines_2_16: -4430336647704771420
+      BG_white_lines_2_17: -8601246073408290199
+      BG_white_lines_2_18: -8325990428829750234
+      BG_white_lines_2_19: -3747498334219087319
+      BG_white_lines_2_2: -1934138440413027006
+      BG_white_lines_2_20: -2337106965164455181
+      BG_white_lines_2_21: -5974805513507591568
+      BG_white_lines_2_22: 823078095720418080
+      BG_white_lines_2_23: 4844651638930216383
+      BG_white_lines_2_24: -7027217826122598897
+      BG_white_lines_2_25: 2238460726191765873
+      BG_white_lines_2_3: -3747907910593868581
+      BG_white_lines_2_4: -3827852196456525190
+      BG_white_lines_2_5: 2764369752682335559
+      BG_white_lines_2_6: 1993447062262636429
+      BG_white_lines_2_7: -3003602122662913990
+      BG_white_lines_2_8: -6045261858135855544
+      BG_white_lines_2_9: 8947326462976745840
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

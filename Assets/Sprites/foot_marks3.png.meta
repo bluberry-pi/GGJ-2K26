@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 36436c3b19b42cf429e0a87c48f61c88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9075991062022725869
+    second: foot_marks3_0
+  - first:
+      213: 8312438788531885358
+    second: foot_marks3_1
+  - first:
+      213: 7108453412682538696
+    second: foot_marks3_2
+  - first:
+      213: -2334079170628584570
+    second: foot_marks3_3
+  - first:
+      213: -3098478016044719092
+    second: foot_marks3_4
+  - first:
+      213: 7014516673757652082
+    second: foot_marks3_5
+  - first:
+      213: -1768993012902693133
+    second: foot_marks3_6
+  - first:
+      213: -4628233536944958629
+    second: foot_marks3_7
+  - first:
+      213: -5146495316953532525
+    second: foot_marks3_8
+  - first:
+      213: -5563801224735456095
+    second: foot_marks3_9
+  - first:
+      213: -6062764431198181597
+    second: foot_marks3_10
+  - first:
+      213: -9215814907253113772
+    second: foot_marks3_11
+  - first:
+      213: 663407736432903915
+    second: foot_marks3_12
+  - first:
+      213: 5675455637890743410
+    second: foot_marks3_13
+  - first:
+      213: 7830050530466296654
+    second: foot_marks3_14
+  - first:
+      213: -1481868356559326836
+    second: foot_marks3_15
+  - first:
+      213: -8622320455300784453
+    second: foot_marks3_16
+  - first:
+      213: 7863581019924026007
+    second: foot_marks3_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foot_marks3_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 690
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31fd38b373a9b0280800000000000000
+      internalID: -9075991062022725869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_1
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 719
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e251f977907bb5370800000000000000
+      internalID: 8312438788531885358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_2
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 654
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce1b5577bc46a260800000000000000
+      internalID: 7108453412682538696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_3
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 677
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b7b0d5c5fab9fd0800000000000000
+      internalID: -2334079170628584570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_4
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 650
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c042c4d29aefff4d0800000000000000
+      internalID: -3098478016044719092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_5
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 668
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274216210c1985160800000000000000
+      internalID: 7014516673757652082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_6
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 559
+        width: 49
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f679cf2a364377e0800000000000000
+      internalID: -1768993012902693133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_7
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 544
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5398dc9e1635cfb0800000000000000
+      internalID: -4628233536944958629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_8
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 505
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397f5cac6c9f398b0800000000000000
+      internalID: -5146495316953532525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_9
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 419
+        width: 72
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a482cea34869c2b0800000000000000
+      internalID: -5563801224735456095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_10
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 454
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3272f892fdbbcdba0800000000000000
+      internalID: -6062764431198181597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_11
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 453
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45cbd695b29da1080800000000000000
+      internalID: -9215814907253113772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_12
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 326
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6445742d5e43900800000000000000
+      internalID: 663407736432903915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_13
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 293
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c37f235d443ce40800000000000000
+      internalID: 5675455637890743410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_14
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 313
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e437dc9d87de9ac60800000000000000
+      internalID: 7830050530466296654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_15
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 270
+        width: 123
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81b36bb4985f6be0800000000000000
+      internalID: -1481868356559326836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_16
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 227
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe563a9a3d575880800000000000000
+      internalID: -8622320455300784453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foot_marks3_17
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 216
+        width: 152
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792531b464d012d60800000000000000
+      internalID: 7863581019924026007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      foot_marks3_0: -9075991062022725869
+      foot_marks3_1: 8312438788531885358
+      foot_marks3_10: -6062764431198181597
+      foot_marks3_11: -9215814907253113772
+      foot_marks3_12: 663407736432903915
+      foot_marks3_13: 5675455637890743410
+      foot_marks3_14: 7830050530466296654
+      foot_marks3_15: -1481868356559326836
+      foot_marks3_16: -8622320455300784453
+      foot_marks3_17: 7863581019924026007
+      foot_marks3_2: 7108453412682538696
+      foot_marks3_3: -2334079170628584570
+      foot_marks3_4: -3098478016044719092
+      foot_marks3_5: 7014516673757652082
+      foot_marks3_6: -1768993012902693133
+      foot_marks3_7: -4628233536944958629
+      foot_marks3_8: -5146495316953532525
+      foot_marks3_9: -5563801224735456095
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
