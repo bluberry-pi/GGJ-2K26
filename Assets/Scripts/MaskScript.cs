@@ -19,18 +19,18 @@ public class MaskScript : MonoBehaviour
     int playerNormalLayer;
     int normalObstacleLayer;
     int buttonLayer;
-    int maskedPlayerLayer;
-    int maskedObstacleLayer;
+    int playerMaskedLayer;     // PlayerMasked1
+    int maskObstacleLayer;     // MaskObstacle
     int boxLayer;
 
     void Start()
     {
-        playerNormalLayer    = LayerMask.NameToLayer("PlayerNormal");
-        normalObstacleLayer  = LayerMask.NameToLayer("NormalObstacle");
-        buttonLayer          = LayerMask.NameToLayer("Button");
-        maskedPlayerLayer    = LayerMask.NameToLayer("MaskedPlayer");
-        maskedObstacleLayer  = LayerMask.NameToLayer("MaskedObstacle");
-        boxLayer             = LayerMask.NameToLayer("Box");
+        playerNormalLayer   = LayerMask.NameToLayer("PlayerNormal");
+        normalObstacleLayer = LayerMask.NameToLayer("NormalObstacle");
+        buttonLayer         = LayerMask.NameToLayer("Button");
+        playerMaskedLayer   = LayerMask.NameToLayer("PlayerMasked1");
+        maskObstacleLayer   = LayerMask.NameToLayer("MaskObstacle");
+        boxLayer            = LayerMask.NameToLayer("Box");
 
         SetMask(false); // start in normal mode
     }
@@ -50,18 +50,21 @@ public class MaskScript : MonoBehaviour
     {
         IsMaskedMode = showMask;
 
+        // Toggle mode objects
         if (normalModeObject)
             normalModeObject.SetActive(!showMask);
 
         if (maskedModeObject)
             maskedModeObject.SetActive(showMask);
 
+        // Toggle sprites
         foreach (var s in normalSprites)
             if (s) s.enabled = !showMask;
 
         foreach (var s in maskedSprites)
             if (s) s.enabled = showMask;
 
+        // Toggle scripts
         foreach (var script in disableInNormalMode)
             if (script) script.enabled = showMask;
 
@@ -70,13 +73,22 @@ public class MaskScript : MonoBehaviour
 
         bool ignoreInNormal = !showMask;
 
-        // Normal world rules
-        SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
+        /*
+         * NORMAL MODE
+         * PlayerMasked1 ignores MaskObstacle
+         */
+        SafeIgnore(playerMaskedLayer, maskObstacleLayer, ignoreInNormal);
 
-        // Masked world ignored in normal mode
-        SafeIgnore(maskedPlayerLayer, maskedObstacleLayer, ignoreInNormal);
-        SafeIgnore(maskedPlayerLayer, boxLayer, ignoreInNormal);
-        SafeIgnore(buttonLayer, maskedPlayerLayer, ignoreInNormal);
+        /*
+         * MASKED MODE
+         * Restore collisions
+         */
+        SafeIgnore(playerMaskedLayer, maskObstacleLayer, false);
+
+        /*
+         * OPTIONAL: Normal world separation
+         */
+        SafeIgnore(playerNormalLayer, normalObstacleLayer, showMask);
     }
 
     void SafeIgnore(int layerA, int layerB, bool ignore)

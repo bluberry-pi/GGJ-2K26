@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 5d594b2349a155b4d9039ce9e4b20ab4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7772469682786653371
+    second: BG_black_lines_0
+  - first:
+      213: 904438385228157053
+    second: BG_black_lines_1
+  - first:
+      213: -3432549182326948068
+    second: BG_black_lines_2
+  - first:
+      213: -8798785189976159240
+    second: BG_black_lines_3
+  - first:
+      213: 3626015960978077420
+    second: BG_black_lines_4
+  - first:
+      213: -177297175160185391
+    second: BG_black_lines_5
+  - first:
+      213: 58153607282034798
+    second: BG_black_lines_6
+  - first:
+      213: 8546997053526798604
+    second: BG_black_lines_7
+  - first:
+      213: 3908766442327777037
+    second: BG_black_lines_8
+  - first:
+      213: -1069147779116395383
+    second: BG_black_lines_9
+  - first:
+      213: 3204187779774507460
+    second: BG_black_lines_10
+  - first:
+      213: -5041791730242746179
+    second: BG_black_lines_11
+  - first:
+      213: -8129292401195622015
+    second: BG_black_lines_12
+  - first:
+      213: -7416094431901875666
+    second: BG_black_lines_13
+  - first:
+      213: -7939667628236033250
+    second: BG_black_lines_14
+  - first:
+      213: -5880384204569248481
+    second: BG_black_lines_15
+  - first:
+      213: 6754107938781787024
+    second: BG_black_lines_16
+  - first:
+      213: 5042145819242808667
+    second: BG_black_lines_17
+  - first:
+      213: 9171176220849397685
+    second: BG_black_lines_18
+  - first:
+      213: -3419451092692211773
+    second: BG_black_lines_19
+  - first:
+      213: -5153491435549315981
+    second: BG_black_lines_20
+  - first:
+      213: -7687631535634658579
+    second: BG_black_lines_21
+  - first:
+      213: -2889157958868082924
+    second: BG_black_lines_22
+  - first:
+      213: 6733700458517896949
+    second: BG_black_lines_23
+  - first:
+      213: -5952691728797465633
+    second: BG_black_lines_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BG_black_lines_0
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 742
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4ddf50ffb5ddb60800000000000000
+      internalID: 7772469682786653371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 769
+        width: 67
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7090c06be53d8c00800000000000000
+      internalID: 904438385228157053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_2
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 770
+        width: 186
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f385184b22d50d0800000000000000
+      internalID: -3432549182326948068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_3
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 772
+        width: 42
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbc088dc7f64e580800000000000000
+      internalID: -8798785189976159240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_4
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 770
+        width: 61
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6bef71e42325230800000000000000
+      internalID: 3626015960978077420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_5
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 753
+        width: 63
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd95e6982d1a8df0800000000000000
+      internalID: -177297175160185391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_6
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 673
+        width: 6
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e680470d56a9ec000800000000000000
+      internalID: 58153607282034798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_7
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 636
+        width: 9
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0176c749880d9670800000000000000
+      internalID: 8546997053526798604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_8
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 533
+        width: 9
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f1ae8ae5abe3630800000000000000
+      internalID: 3908766442327777037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_9
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 579
+        width: 8
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9849e5d62cf9921f0800000000000000
+      internalID: -1069147779116395383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_10
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 386
+        width: 10
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c96b172fcf877c20800000000000000
+      internalID: 3204187779774507460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_11
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 525
+        width: 7
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db801674225f70ab0800000000000000
+      internalID: -5041791730242746179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_12
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 507
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181e377c1a3fe2f80800000000000000
+      internalID: -8129292401195622015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_13
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 418
+        width: 7
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e228cb5086db41990800000000000000
+      internalID: -7416094431901875666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_14
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 404
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13b258bb52a0d190800000000000000
+      internalID: -7939667628236033250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_15
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 364
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1df4d7b8bda46ea0800000000000000
+      internalID: -5880384204569248481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_16
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 354
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093fbb1b2696bbd50800000000000000
+      internalID: 6754107938781787024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_17
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 342
+        width: 8
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5540bd78ec49f540800000000000000
+      internalID: 5042145819242808667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_18
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 260
+        width: 9
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfdc309e20964f70800000000000000
+      internalID: 9171176220849397685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_19
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 261
+        width: 8
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c76245295bab80d0800000000000000
+      internalID: -3419451092692211773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_20
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 221
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ca01ff7de1b78b0800000000000000
+      internalID: -5153491435549315981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_21
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 222
+        width: 114
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deac76269db005590800000000000000
+      internalID: -7687631535634658579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_22
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 222
+        width: 57
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fdca1d426a7e7d0800000000000000
+      internalID: -2889157958868082924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_23
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 222
+        width: 167
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe18dde3e8e27d50800000000000000
+      internalID: 6733700458517896949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_black_lines_24
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 223
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd30f9f496ac36da0800000000000000
+      internalID: -5952691728797465633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BG_black_lines_0: 7772469682786653371
+      BG_black_lines_1: 904438385228157053
+      BG_black_lines_10: 3204187779774507460
+      BG_black_lines_11: -5041791730242746179
+      BG_black_lines_12: -8129292401195622015
+      BG_black_lines_13: -7416094431901875666
+      BG_black_lines_14: -7939667628236033250
+      BG_black_lines_15: -5880384204569248481
+      BG_black_lines_16: 6754107938781787024
+      BG_black_lines_17: 5042145819242808667
+      BG_black_lines_18: 9171176220849397685
+      BG_black_lines_19: -3419451092692211773
+      BG_black_lines_2: -3432549182326948068
+      BG_black_lines_20: -5153491435549315981
+      BG_black_lines_21: -7687631535634658579
+      BG_black_lines_22: -2889157958868082924
+      BG_black_lines_23: 6733700458517896949
+      BG_black_lines_24: -5952691728797465633
+      BG_black_lines_3: -8798785189976159240
+      BG_black_lines_4: 3626015960978077420
+      BG_black_lines_5: -177297175160185391
+      BG_black_lines_6: 58153607282034798
+      BG_black_lines_7: 8546997053526798604
+      BG_black_lines_8: 3908766442327777037
+      BG_black_lines_9: -1069147779116395383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

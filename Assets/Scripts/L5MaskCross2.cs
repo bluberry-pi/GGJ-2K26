@@ -18,6 +18,8 @@ public class L5MaskCross2 : MonoBehaviour
     public MaskScript maskScript;
 
     Coroutine moveRoutine;
+    int objectsInside = 0;
+
 
     private void Start()
     {
@@ -27,21 +29,48 @@ public class L5MaskCross2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Ignore MaskedPlayer when NOT in masked mode
-        if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
-            return;
+        Debug.Log($"[ENTER] {other.name} | {other.tag} | MaskedMode: {maskScript.IsMaskedMode}");
 
-        StartMove(openLocalPosition, openSpeed);
+        if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
+        {
+            Debug.Log("[BLOCKED] MaskedPlayer blocked");
+            return;
+        }
+
+        objectsInside++;
+
+        Debug.Log($"[COUNT] Inside = {objectsInside}");
+
+        if (objectsInside == 1)
+        {
+            Debug.Log("[ACTION] Opening door");
+            StartMove(openLocalPosition, openSpeed);
+        }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Same rule on exit
-        if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
-            return;
+        Debug.Log($"[EXIT] {other.name} | {other.tag} | MaskedMode: {maskScript.IsMaskedMode}");
 
-        StartMove(closedLocalPosition, closeSpeed);
+        if (!maskScript.IsMaskedMode && other.CompareTag("MaskedPlayer"))
+        {
+            Debug.Log("[BLOCKED] MaskedPlayer exit ignored");
+            return;
+        }
+
+        objectsInside = Mathf.Max(0, objectsInside - 1);
+
+        Debug.Log($"[COUNT] Inside = {objectsInside}");
+
+        if (objectsInside == 0)
+        {
+            Debug.Log("[ACTION] Closing door");
+            StartMove(closedLocalPosition, closeSpeed);
+        }
     }
+
+
 
     void StartMove(Vector3 targetLocalPos, float speed)
     {
