@@ -1,39 +1,54 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class CratePull : MonoBehaviour
 {
     public float followSpeed = 10f;
 
     private Transform player;
+    private Rigidbody2D rb;
     private bool canToggle;
     private bool isPulling;
-    private Vector3 offset;
+    private Vector2 offset;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+    }
 
     void Update()
     {
         if (player == null) return;
 
-        // Allow P toggle only while in trigger
         if (canToggle && Input.GetKeyDown(KeyCode.E))
         {
             isPulling = !isPulling;
 
             if (isPulling)
             {
-                offset = transform.position - player.position;
+                offset = rb.position - (Vector2)player.position;
+                rb.mass = 0.5f; // lighter while pulled, less bullying
+            }
+            else
+            {
+                rb.mass = 2f; // back to normal
             }
         }
+    }
 
-        // FOLLOW DOES NOT CARE ABOUT TRIGGER
-        if (isPulling)
-        {
-            Vector3 targetPos = player.position + offset;
-            transform.position = Vector3.Lerp(
-                transform.position,
-                targetPos,
-                followSpeed * Time.deltaTime
-            );
-        }
+    void FixedUpdate()
+    {
+        if (!isPulling || player == null) return;
+
+        Vector2 targetPos = (Vector2)player.position + offset;
+        Vector2 newPos = Vector2.Lerp(
+            rb.position,
+            targetPos,
+            followSpeed * Time.fixedDeltaTime
+        );
+
+        rb.MovePosition(newPos);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,7 +65,7 @@ public class CratePull : MonoBehaviour
         if (other.transform == player)
         {
             canToggle = false;
-            // do NOT touch isPulling
+            // pulling stays active, as requested
         }
     }
 }

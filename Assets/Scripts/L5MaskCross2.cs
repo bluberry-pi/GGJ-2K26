@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class L5MaskCross2 : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class L5MaskCross2 : MonoBehaviour
     public MaskScript maskScript;
 
     Coroutine moveRoutine;
-    int objectsInside = 0;
+
+    // The adult way to count
+    HashSet<Collider2D> insideObjects = new HashSet<Collider2D>();
 
     private void Start()
     {
@@ -41,13 +44,15 @@ public class L5MaskCross2 : MonoBehaviour
             return;
         }
 
-        objectsInside++;
-        Debug.Log($"[COUNT] Inside = {objectsInside}");
-
-        if (objectsInside == 1)
+        if (insideObjects.Add(other))
         {
-            Debug.Log("[ACTION] Opening door");
-            StartMove(openLocalPosition, openSpeed);
+            Debug.Log($"[COUNT] Inside = {insideObjects.Count}");
+
+            if (insideObjects.Count == 1)
+            {
+                Debug.Log("[ACTION] Opening door");
+                StartMove(openLocalPosition, openSpeed);
+            }
         }
     }
 
@@ -59,24 +64,23 @@ public class L5MaskCross2 : MonoBehaviour
 
         Debug.Log($"[EXIT] {other.name} | {other.tag} | MaskedMode: {maskScript.IsMaskedMode}");
 
-        objectsInside = Mathf.Max(0, objectsInside - 1);
-        Debug.Log($"[COUNT] Inside = {objectsInside}");
-
-        if (objectsInside == 0)
+        if (insideObjects.Remove(other))
         {
-            Debug.Log("[ACTION] Closing door");
-            StartMove(closedLocalPosition, closeSpeed);
+            Debug.Log($"[COUNT] Inside = {insideObjects.Count}");
+
+            if (insideObjects.Count == 0)
+            {
+                Debug.Log("[ACTION] Closing door");
+                StartMove(closedLocalPosition, closeSpeed);
+            }
         }
     }
 
     // -------------------- HELPERS --------------------
     bool IsDoorObject(Collider2D other)
     {
-        // Players
         if (other.CompareTag("NormalPlayer")) return true;
         if (other.CompareTag("MaskedPlayer")) return true;
-
-        // Crates (use tag or layer, your choice)
         if (other.CompareTag("Crate")) return true;
 
         return false;
