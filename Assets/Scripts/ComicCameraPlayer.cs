@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComicCameraPlayer : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class ComicCameraPlayer : MonoBehaviour
     public float zoomSpeed = 2.5f;
     public float holdTime = 1.2f;
 
+    [Header("After Comic")]
+    public float waitBeforeNextLevel = 1f;
+
     Camera cam;
     Bounds bounds;
 
@@ -43,6 +47,11 @@ public class ComicCameraPlayer : MonoBehaviour
             yield return MoveToPanel(panel);
             yield return new WaitForSeconds(holdTime);
         }
+
+        // comic is over, let it breathe
+        yield return new WaitForSeconds(waitBeforeNextLevel);
+
+        LoadNextLevel();
     }
 
     IEnumerator MoveToPanel(Rect panel)
@@ -74,5 +83,11 @@ public class ComicCameraPlayer : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    void LoadNextLevel()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentIndex + 1);
     }
 }
