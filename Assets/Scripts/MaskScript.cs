@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class MaskScript : MonoBehaviour
 {
@@ -7,7 +6,7 @@ public class MaskScript : MonoBehaviour
     public SpriteRenderer[] normalSprites;
     public SpriteRenderer[] maskedSprites;
 
-    [Header("Mode GameObjects")]
+    [Header("Mode Root Objects")]
     public GameObject normalModeObject;
     public GameObject maskedModeObject;
 
@@ -15,20 +14,13 @@ public class MaskScript : MonoBehaviour
     public MonoBehaviour[] disableInNormalMode;
     public MonoBehaviour[] disableInMaskedMode;
 
-    [Header("Mask Visuals")]
+    [Header("Extra GameObjects To Toggle")]
+    public GameObject[] disableObjectsInNormalMode;
+    public GameObject[] disableObjectsInMaskedMode;
+
+    [Header("Mask Visuals (instant on/off only)")]
     public GameObject blackMask;
     public GameObject whiteMask;
-
-    [Header("Black Mask Target")]
-    public Vector3 blackMaskTargetPosition;
-    public Vector3 blackMaskTargetScale = Vector3.one;
-
-    [Header("White Mask Target")]
-    public Vector3 whiteMaskTargetPosition;
-    public Vector3 whiteMaskTargetScale = Vector3.one;
-
-    public float maskMoveSpeed = 5f;
-    public float maskScaleSpeed = 5f;
 
     public bool IsMaskedMode { get; private set; }
 
@@ -37,128 +29,63 @@ public class MaskScript : MonoBehaviour
     int playerMaskedLayer;
     int maskObstacleLayer;
 
-    bool isAnimating;
-
-    Vector3 blackMaskStartPos;
-    Vector3 blackMaskStartScale;
-    Vector3 whiteMaskStartPos;
-    Vector3 whiteMaskStartScale;
-
     void Start()
     {
-        playerNormalLayer = LayerMask.NameToLayer("PlayerNormal");
+        playerNormalLayer   = LayerMask.NameToLayer("PlayerNormal");
         normalObstacleLayer = LayerMask.NameToLayer("NormalObstacle");
-        playerMaskedLayer = LayerMask.NameToLayer("PlayerMasked1");
-        maskObstacleLayer = LayerMask.NameToLayer("MaskObstacle");
+        playerMaskedLayer   = LayerMask.NameToLayer("PlayerMasked1");
+        maskObstacleLayer   = LayerMask.NameToLayer("MaskObstacle");
 
-        if (blackMask)
-        {
-            blackMaskStartPos = blackMask.transform.position;
-            blackMaskStartScale = blackMask.transform.localScale;
-        }
-
-        if (whiteMask)
-        {
-            whiteMaskStartPos = whiteMask.transform.position;
-            whiteMaskStartScale = whiteMask.transform.localScale;
-        }
-
-        SetMask(false);
+        SetMask(false); // start in normal mode
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isAnimating)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (!IsMaskedMode)
-                StartCoroutine(PlayMaskTransition(blackMask, true));
-            else
-                StartCoroutine(PlayMaskTransition(whiteMask, false));
+            SetMask(!IsMaskedMode);
         }
-    }
-
-    IEnumerator PlayMaskTransition(GameObject mask, bool toMasked)
-    {
-        if (!mask) yield break;
-
-        isAnimating = true;
-
-        Transform t = mask.transform;
-
-        Vector3 targetPos;
-        Vector3 targetScale;
-
-        if (mask == blackMask)
-        {
-            targetPos = blackMaskTargetPosition;
-            targetScale = blackMaskTargetScale;
-        }
-        else
-        {
-            targetPos = whiteMaskTargetPosition;
-            targetScale = whiteMaskTargetScale;
-        }
-
-        // STEP 1: MOVE FIRST
-        while (Vector3.Distance(t.position, targetPos) > 0.01f)
-        {
-            t.position = Vector3.MoveTowards(
-                t.position,
-                targetPos,
-                maskMoveSpeed * Time.deltaTime
-            );
-            yield return null;
-        }
-        yield return new WaitForSeconds(0.5f);
-        // STEP 2: SCALE AFTER MOVE
-        while (Vector3.Distance(t.localScale, targetScale) > 0.01f)
-        {
-            t.localScale = Vector3.MoveTowards(
-                t.localScale,
-                targetScale,
-                maskScaleSpeed * Time.deltaTime
-            );
-            yield return null;
-        }
-
-        // SNAP BACK
-        if (mask == blackMask)
-        {
-            t.position = blackMaskStartPos;
-            t.localScale = blackMaskStartScale;
-        }
-        else
-        {
-            t.position = whiteMaskStartPos;
-            t.localScale = whiteMaskStartScale;
-        }
-
-        SetMask(toMasked);
-        isAnimating = false;
     }
 
     void SetMask(bool masked)
     {
         IsMaskedMode = masked;
 
+        // Root objects
         if (normalModeObject)
             normalModeObject.SetActive(!masked);
 
         if (maskedModeObject)
             maskedModeObject.SetActive(masked);
 
+        // Sprites
         ToggleSprites(normalSprites, !masked);
         ToggleSprites(maskedSprites, masked);
 
+        // Scripts
         ToggleScripts(disableInNormalMode, masked);
         ToggleScripts(disableInMaskedMode, !masked);
+
+        // Extra objects
+        ToggleObjects(disableObjectsInNormalMode, !masked);
+        ToggleObjects(disableObjectsInMaskedMode, masked);
+
+        // Mask visuals (no animation, just visibility)
+        if (blackMask)
+            blackMask.SetActive(!masked);
+
+        if (whiteMask)
+            whiteMask.SetActive(masked);
 
         ApplyCollisionRules();
     }
 
     void ApplyCollisionRules()
     {
+        // Masked player should only collide with masked obstacles
         SafeIgnore(playerMaskedLayer, maskObstacleLayer, !IsMaskedMode);
+
+        // Normal player should only collide with normal obstacles
         SafeIgnore(playerNormalLayer, normalObstacleLayer, IsMaskedMode);
     }
 
@@ -172,6 +99,12 @@ public class MaskScript : MonoBehaviour
     {
         foreach (var script in scripts)
             if (script) script.enabled = state;
+    }
+
+    void ToggleObjects(GameObject[] objects, bool state)
+    {
+        foreach (var obj in objects)
+            if (obj) obj.SetActive(state);
     }
 
     void SafeIgnore(int layerA, int layerB, bool ignore)
