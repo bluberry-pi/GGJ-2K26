@@ -292,11 +292,11 @@ MonoBehaviour:
     width: 0.488
     height: 0.303
   - serializedVersion: 2
-    x: 0.504
-    y: 0.396
-    width: 0.488
-    height: 0.303
-  moveSpeed: 2.5
+    x: 0.109
+    y: 0.01
+    width: 0.782
+    height: 0.38
+  moveSpeed: 10
   zoomSpeed: 2.5
   holdTime: 1.2
 --- !u!1 &1658684339
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7ddf7bc0fd960418b0a0f27e6ff60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 0.001
-  y: 0.001
-  width: 0.996
+  x: 0.11
+  y: 0
+  width: 0.782
   height: 0.38
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
