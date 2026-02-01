@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: normalSprites.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: 'maskedSprites.Array.data[0]'
@@ -533,6 +533,14 @@ PrefabInstance:
       propertyPath: 'normalSprites.Array.data[5]'
       value: 
       objectReference: {fileID: 1622902835}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[6]'
+      value: 
+      objectReference: {fileID: 262178501}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1642665078}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: disableInMaskedMode.Array.size
       value: 1

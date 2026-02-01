@@ -108,4 +108,9 @@ public class L5MaskCross2 : MonoBehaviour
 
         door1.localPosition = targetLocalPos;
     }
+    void OnDisable()
+{
+    StopAllCoroutines();
+}
+
 }
