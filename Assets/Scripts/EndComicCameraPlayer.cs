@@ -24,9 +24,12 @@ public class EndComicCameraPlayer : MonoBehaviour
 
     void OnEnable()
     {
+        if (comicSprite == null) return;
+
         cam = GetComponent<Camera>();
         cam.orthographic = true;
         bounds = comicSprite.bounds;
+
         StopAllCoroutines();
         StartCoroutine(PlayComic());
     }
@@ -38,7 +41,9 @@ public class EndComicCameraPlayer : MonoBehaviour
             yield return MoveToPanel(panel);
             yield return new WaitForSeconds(holdTime);
         }
+
         yield return new WaitForSeconds(1f);
+        enabled = false;
         SceneManager.LoadScene(0);
     }
 
@@ -50,11 +55,16 @@ public class EndComicCameraPlayer : MonoBehaviour
             transform.position.z
         );
 
-        float targetZoom = bounds.size.y * panel.height / 2f;
+        float baseZoom = bounds.size.y * panel.height / 2f;
+        float targetZoom = Mathf.Abs(cam.orthographicSize - baseZoom) < 0.25f
+            ? baseZoom + 0.25f
+            : baseZoom;
+
+        yield return null;
 
         while (
-            Vector2.Distance(transform.position, targetPos) > 0.01f ||
-            Mathf.Abs(cam.orthographicSize - targetZoom) > 0.01f
+            Vector2.Distance(transform.position, targetPos) > 0.001f ||
+            Mathf.Abs(cam.orthographicSize - targetZoom) > 0.001f
         )
         {
             transform.position = Vector3.Lerp(
@@ -71,5 +81,7 @@ public class EndComicCameraPlayer : MonoBehaviour
 
             yield return null;
         }
+
+        cam.orthographicSize = baseZoom;
     }
 }
