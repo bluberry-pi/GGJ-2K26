@@ -3175,7 +3175,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.026708841, y: 3.7291443}
+  m_Offset: {x: -0.1744957, y: 3.7291443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3185,7 +3185,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.002069, y: 0.78513765}
+  m_Size: {x: 8.708506, y: 0.78513765}
   m_EdgeRadius: 0
 --- !u!114 &1348708510
 MonoBehaviour:
@@ -3201,8 +3201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorPartA: {fileID: 1254337007}
   doorPartB: {fileID: 644056737}
-  doorAPosition: {x: -2.2, y: 4.03151, z: 0}
-  doorBPosition: {x: 2.06, y: 4.03151, z: 0}
+  doorAPosition: {x: -4.57, y: 4.3648, z: 0}
+  doorBPosition: {x: 4.36, y: 4.3648, z: 0}
   moveSpeed: 3
 --- !u!1 &1379071244
 GameObject:
@@ -4225,7 +4225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: normalSprites.Array.size
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: blackMaskTargetPosition.x
@@ -4371,6 +4371,10 @@ PrefabInstance:
       propertyPath: 'normalSprites.Array.data[16]'
       value: 
       objectReference: {fileID: 644056736}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[17]'
+      value: 
+      objectReference: {fileID: 388786103}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: disableInNormalMode.Array.size
       value: 2
