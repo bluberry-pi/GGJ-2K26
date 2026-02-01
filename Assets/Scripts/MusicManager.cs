@@ -28,15 +28,14 @@ public class MusicManager : MonoBehaviour
     {
         int buildIndex = scene.buildIndex;
 
-        // Music starts ONLY from scene index 2
-        if (buildIndex >= 2)
+        // Play ONLY from scene 2+, but NOT scene 8
+        if (buildIndex >= 2 && buildIndex != 8)
         {
             if (!audioSource.isPlaying)
                 audioSource.Play();
         }
         else
         {
-            // Ensure silence in early scenes
             if (audioSource.isPlaying)
                 audioSource.Stop();
         }
