@@ -4399,7 +4399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: normalSprites.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: blackMaskTargetPosition.x
@@ -4553,6 +4553,10 @@ PrefabInstance:
       propertyPath: 'normalSprites.Array.data[18]'
       value: 
       objectReference: {fileID: 752787132}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[19]'
+      value: 
+      objectReference: {fileID: 21697074}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: disableInNormalMode.Array.size
       value: 2

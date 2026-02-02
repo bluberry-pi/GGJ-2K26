@@ -558,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: normalSprites.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: 'maskedSprites.Array.data[0]'
@@ -608,6 +608,10 @@ PrefabInstance:
       propertyPath: 'normalSprites.Array.data[5]'
       value: 
       objectReference: {fileID: 1624044369}
+    - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
+      propertyPath: 'normalSprites.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1786535454}
     - target: {fileID: 4401541332877393636, guid: 7b65fb61e7484b945ab872180d7dece5, type: 3}
       propertyPath: disableInNormalMode.Array.size
       value: 1
@@ -1788,8 +1792,8 @@ Transform:
   m_GameObject: {fileID: 1786535453}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.99999917, w: -0.0013401988}
-  m_LocalPosition: {x: 5.98, y: 2.03, z: 0}
-  m_LocalScale: {x: 1.5303, y: 1.5303, z: 1.5303}
+  m_LocalPosition: {x: 6.39, y: 2.33, z: 0}
+  m_LocalScale: {x: 2.1975107, y: 2.1975107, z: 2.1975107}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -296,9 +296,9 @@ MonoBehaviour:
     y: 0.01
     width: 0.782
     height: 0.38
-  moveSpeed: 10
+  moveSpeed: 15
   zoomSpeed: 2.5
-  holdTime: 1.2
+  holdTime: 0.5
 --- !u!1 &1658684339
 GameObject:
   m_ObjectHideFlags: 0
